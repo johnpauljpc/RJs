@@ -7,6 +7,19 @@
   pointer-events: none;
 }
 
+.Navbar{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+}
+.Navbar h1{
+  margin-right: 100px;
+}
+.nav-links a{
+  margin: 0 3px
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin  10s infinite ;
