@@ -1,7 +1,11 @@
 import { useState } from "react";
 const Home = () => {
     const [myName, setName] = useState('Johnpaul')
-    
+    const [blogs, setBlogs] = useState([
+        {title:"post1", body:"this is post1", id:1},
+        {title:"post2", body:"this is post2", id:2},
+        {title:"post3", body:"this is post3", id:3}
+    ])
     const handleClick = () =>{
         console.log("clicked me!")
         if (myName ==='Johnpaul'){
@@ -21,6 +25,17 @@ const Home = () => {
             <button onClick={()=>{
                 clickMeAgain('Johnpaul')
             }}>Click me again</button>
+
+            
+                {
+                    blogs.map((blog)=>(
+                        <div className="blog-preview" key={blog.id}>
+                        <h2>{blog.title}</h2>
+                        <p>{blog.body}</p>
+                        </div>
+                    ))
+                }
+            
         </div>
      );
 }
